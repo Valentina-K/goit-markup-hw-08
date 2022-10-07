@@ -1,0 +1,26 @@
+.list__item-client {
+    flex-basis: calc((100% - 150px)/6);
+    margin-left: 30px;
+}
+
+.list__link-client {
+    width: 170px;
+    height: 92px;
+    @include flex(flex,center,center);
+    border: 1px solid var(--icon-color);
+    border-radius: 4px;
+
+    &:hover,
+    &:focus {
+        border: 1px solid var(--accent-color);
+    }
+}
+
+.list__icon-client {
+    fill: var(--icon-color);
+
+    .list__link-client:hover &,
+    .list__link-client:focus & {
+        fill: var(--accent-color);
+    }
+}

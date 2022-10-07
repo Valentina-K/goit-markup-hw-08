@@ -1,0 +1,40 @@
+.list__item-filter:not(:last-child) {
+    margin-right: 8px;
+}
+
+.filter-cont {
+    margin-bottom: 50px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.filter {
+    padding: 6px 22px;
+    font-weight: 500;
+    line-height: 1.62;
+    letter-spacing: 0.03em;
+    color: var(--second-text-color);
+    background-color: var(--section-bg-color);
+    min-width: 73px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        background-color: var(--accent-color);
+        color: var(--white-color);
+            box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16),
+            0 4px 4px rgba(0, 0, 0, 0.06),
+            0 1px 1px rgba(0, 0, 0, 0.12);
+    }
+
+    &.active {
+        background-color: var(--accent-color);
+        color: var(--white-color);
+    }
+}
+
+
+
