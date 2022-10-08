@@ -1,38 +1,43 @@
 .team-section {
-    background-color: var(--section-bg-color);
+  background-color: var(--section-bg-color);
 }
 
-.team {
-    line-height: 1.19;
-    text-align: center;
-    background-color: var(--white-color);
-}
+/* .team {
+  line-height: 1.19;
+  text-align: center;
+  background-color: var(--white-color);
+} */
 
 .card-desc {
-    padding: 30px 32px;
+  width: 100%;
+  padding: 30px 122px;
 }
 
-.list__item-team {
-    flex-basis: calc((100% - 90px)/4);
-    box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2),
-        0 1px 1px 0 rgba(0, 0, 0, 0.14),
-        0 1px 3px 0 rgba(0, 0, 0, 0.12);
-    border-radius: 0 0 4px 4px;
+.team-list__item {
+  line-height: 1.19;
+  text-align: center;
+  background-color: var(--white-color);
+  box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 0 0 4px 4px;
 
-    &:not(:last-child) {
-        margin-right: 30px;
-    }
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  @media screen and(min-width: 1200px) {
+    flex-basis: calc((100% - 90px) / 4);
+  }
 }
 
 .team-title {
-    font-size: 16px;
-    font-weight: 500;
-    color: var(--second-text-color);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--second-text-color);
 
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
-.team-title+p {
-    font-size: 16px;
-    margin-bottom: 16px;
+.team-title + p {
+  font-size: 16px;
+  margin-bottom: 16px;
 }

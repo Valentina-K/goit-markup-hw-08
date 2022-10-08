@@ -1,16 +1,19 @@
 .logo {
-    font-family: var(--second-font-family);
-    @include font(26px,700,31px);  
+  font-family: var(--second-font-family);
+  @include font(24px, 700, 28px);
+  @media screen and (min-width: 768px) {
+    @include font(26px, 700, 31px);
+  }
 }
 
 .logo_blue {
-    color: var(--accent-color);
+  color: var(--accent-color);
 }
 
 .logo_black {
-    color: var(--logo-color);
+  color: var(--logo-color);
 }
 
 .logo_white {
-    color: var(--white-color);
+  color: var(--white-color);
 }
