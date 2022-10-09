@@ -1,8 +1,10 @@
 .social-list {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: center;
 }
-
+.social-list__item:not(:last-child) {
+  margin-right: 10px;
+}
 .social-list__icon {
-    fill: var(--icon-color);
+  fill: var(--icon-color);
 }

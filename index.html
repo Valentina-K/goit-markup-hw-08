@@ -61,7 +61,7 @@
         </ul>
         <button
           type="button"
-          class="mobile-menu-btn is-open"
+          class="mobile-menu-btn mobile-btn is-open"
           aria-expanded="false"
           data-menu-button
         >
@@ -71,16 +71,60 @@
             height="40"
             aria-label="Перемикач мобільного меню"
           >
-            <use
-              class="close-menu-icon"
-              href="./images/icons.svg#close-menu-icon"
-            ></use>
-            <use
-              class="burger-menu-icon"
-              href="./images/icons.svg#burger-menu-icon"
-            ></use>
+            <use href="./images/icons.svg#burger-menu-icon"></use>
           </svg>
         </button>
+      </div>
+      <div class="mobile-menu container">
+        <button class="mobile-menu__close-btn mobile-btn">
+          <svg class="mobile-menu__close-icon" width="40" height="40">
+            <use href="./images/icons.svg#close-menu-icon"></use>
+          </svg>
+        </button>
+        <ul class="modal-menu-list modal-nav-list list">
+          <li class="modal-menu-list__item">
+            <a href="./index.html" class="modal-menu-list__link active link"
+              >Студія</a
+            >
+          </li>
+          <li class="modal-menu-list__item">
+            <a href="./portfolio.html" class="modal-menu-list__link link"
+              >Портфоліо</a
+            >
+          </li>
+          <li class="modal-menu-list__item">
+            <a href="#" class="modal-menu-list__link link">Контакти</a>
+          </li>
+        </ul>
+        <ul class="modal-menu-list modal-address-list list">
+          <li class="modal-menu-list__item">
+            <a href="tel:+380961111111" class="modal-menu-list__link-tel link"
+              >+38 096 111 11 11</a
+            >
+          </li>
+          <li class="modal-menu-list__item">
+            <a
+              href="mailto:info@devstudio.com"
+              class="modal-menu-list__link-mailto link"
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
+
+        <ul class="modal-menu-list modal-social-list list">
+          <li class="modal-social-list__item">
+            <a href="#" class="modal-social-list__link link">Instagram</a>
+          </li>
+          <li class="modal-social-list__item">
+            <a href="#" class="modal-social-list__link link">Twitter</a>
+          </li>
+          <li class="modal-social-list__item">
+            <a href="#" class="modal-social-list__link link">Facebook</a>
+          </li>
+          <li class="modal-social-list__item">
+            <a href="#" class="modal-social-list__link link">LinkedIn</a>
+          </li>
+        </ul>
       </div>
     </header>
     <!-- <header class="header-page">

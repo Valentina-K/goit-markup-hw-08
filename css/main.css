@@ -146,7 +146,11 @@ body {
 
 .social-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+}
+
+.social-list__item:not(:last-child) {
+  margin-right: 10px;
 }
 
 .social-list__icon {
@@ -362,6 +366,7 @@ body {
 }
 
 .header {
+  position: relative;
   padding: 10px 0;
   border-bottom: 1px solid var(--border-color);
 }
@@ -461,13 +466,16 @@ body {
   color: var(--accent-color);
 }
 
-.mobile-menu-btn {
-  display: inline-block;
+.mobile-btn {
   background-color: transparent;
   border: none;
   margin: 0;
   padding: 0;
   line-height: 0;
+}
+
+.mobile-menu-btn {
+  display: inline-block;
 }
 .mobile-menu-btn .close-menu-icon {
   display: none;
@@ -482,6 +490,82 @@ body {
   .mobile-menu-btn {
     display: none;
   }
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  overflow: auto;
+  letter-spacing: 0.02em;
+  background-color: var(--white-color);
+}
+
+.mobile-menu__close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+.modal-menu-list {
+  margin-left: 25px;
+}
+
+.modal-nav-list {
+  margin-bottom: 302px;
+}
+
+.modal-menu-list__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.modal-menu-list__link-tel {
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 1.1764705882;
+  color: var(--accent-color);
+}
+
+.modal-menu-list__link-mailto {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.1666666667;
+  letter-spacing: 0.02em;
+  color: var(--main-text-color);
+}
+
+.modal-address-list {
+  margin-bottom: 64px;
+}
+
+.modal-menu-list__link {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.175;
+  color: var(--second-text-color);
+}
+
+.modal-menu-list__link.active {
+  color: var(--accent-color);
+}
+
+.modal-social-list {
+  display: flex;
+}
+
+.modal-social-list__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.modal-social-list__link {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.2222222222;
+  color: var(--accent-color);
 }
 
 /* .header-page {
@@ -705,7 +789,7 @@ body {
 } */
 .card-desc {
   width: 100%;
-  padding: 30px 122px;
+  padding: 30px;
 }
 
 .team-list__item {
