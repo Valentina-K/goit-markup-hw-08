@@ -61,9 +61,9 @@
         </ul>
         <button
           type="button"
-          class="mobile-menu-btn mobile-btn is-open"
+          class="mobile-menu-btn mobile-btn"
           aria-expanded="false"
-          data-menu-button
+          data-menu-open
         >
           <svg
             class="mobile-menu-btn__icon"
@@ -75,54 +75,57 @@
           </svg>
         </button>
       </div>
-      <div class="mobile-menu container">
-        <button class="mobile-menu__close-btn mobile-btn">
+      <div class="mobile-menu container" data-menu>
+        <button
+          class="mobile-menu__close-btn mobile-menu-btn mobile-btn"
+          data-menu-close
+        >
           <svg class="mobile-menu__close-icon" width="40" height="40">
             <use href="./images/icons.svg#close-menu-icon"></use>
           </svg>
         </button>
-        <ul class="modal-menu-list modal-nav-list list">
-          <li class="modal-menu-list__item">
-            <a href="./index.html" class="modal-menu-list__link active link"
+        <ul class="mobile-menu-list mobile-nav-list list">
+          <li class="mobile-menu-list__item">
+            <a href="./index.html" class="mobile-menu-list__link active link"
               >Студія</a
             >
           </li>
-          <li class="modal-menu-list__item">
-            <a href="./portfolio.html" class="modal-menu-list__link link"
+          <li class="mobile-menu-list__item">
+            <a href="./portfolio.html" class="mobile-menu-list__link link"
               >Портфоліо</a
             >
           </li>
-          <li class="modal-menu-list__item">
-            <a href="#" class="modal-menu-list__link link">Контакти</a>
+          <li class="mobile-menu-list__item">
+            <a href="#" class="mobile-menu-list__link link">Контакти</a>
           </li>
         </ul>
-        <ul class="modal-menu-list modal-address-list list">
-          <li class="modal-menu-list__item">
-            <a href="tel:+380961111111" class="modal-menu-list__link-tel link"
+        <ul class="mobile-menu-list mobile-address-list list">
+          <li class="mobile-menu-list__item">
+            <a href="tel:+380961111111" class="mobile-menu-list__link-tel link"
               >+38 096 111 11 11</a
             >
           </li>
-          <li class="modal-menu-list__item">
+          <li class="mobile-menu-list__item">
             <a
               href="mailto:info@devstudio.com"
-              class="modal-menu-list__link-mailto link"
+              class="mobile-menu-list__link-mailto link"
               >info@devstudio.com</a
             >
           </li>
         </ul>
 
-        <ul class="modal-menu-list modal-social-list list">
-          <li class="modal-social-list__item">
-            <a href="#" class="modal-social-list__link link">Instagram</a>
+        <ul class="mobile-menu-list mobile-social-list list">
+          <li class="mobile-social-list__item">
+            <a href="#" class="mobile-social-list__link link">Instagram</a>
           </li>
-          <li class="modal-social-list__item">
-            <a href="#" class="modal-social-list__link link">Twitter</a>
+          <li class="mobile-social-list__item">
+            <a href="#" class="mobile-social-list__link link">Twitter</a>
           </li>
-          <li class="modal-social-list__item">
-            <a href="#" class="modal-social-list__link link">Facebook</a>
+          <li class="mobile-social-list__item">
+            <a href="#" class="mobile-social-list__link link">Facebook</a>
           </li>
-          <li class="modal-social-list__item">
-            <a href="#" class="modal-social-list__link link">LinkedIn</a>
+          <li class="mobile-social-list__item">
+            <a href="#" class="mobile-social-list__link link">LinkedIn</a>
           </li>
         </ul>
       </div>
@@ -592,7 +595,7 @@
             class="contact-form__comment form-text"
             placeholder="Введіть текст"
           ></textarea>
-          <label for="accept" class="accept uniq-text">
+          <label for="accept" class="accept">
             <input
               type="checkbox"
               class="checkbox"

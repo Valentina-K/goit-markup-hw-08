@@ -65,16 +65,11 @@ body {
 
 .container {
   padding: 0 15px;
-  /*480 +*/
+  width: 450px;
+  margin-right: auto;
+  margin-left: auto;
   /*768 +*/
   /*1200 +*/
-}
-@media screen and (min-width: 481px) {
-  .container {
-    width: 450px;
-    margin-right: auto;
-    margin-left: auto;
-  }
 }
 @media screen and (min-width: 768px) {
   .container {
@@ -222,10 +217,16 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  width: 528px;
-  height: 580px;
+  width: 450px;
+  height: 609px;
   background-color: var(--white-color);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 580px;
+  }
 }
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.8);
@@ -241,6 +242,7 @@ body {
   margin: 0 auto 12px;
   line-height: 1.15;
   font-size: 20px;
+  text-align: center;
   color: var(--second-text-color);
 }
 
@@ -298,6 +300,16 @@ body {
   margin: 0 auto 30px;
   display: flex;
   align-items: center;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.1666666667;
+}
+@media screen and (min-width: 1200px) {
+  .accept {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.7142857143;
+  }
 }
 
 .checkbox {
@@ -343,7 +355,7 @@ body {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-subm-btn:hover, .form-subm-btn:focus {
-  background-color: #188CE8;
+  background-color: #188ce8;
 }
 
 .modal-close-btn {
@@ -371,6 +383,17 @@ body {
   border-bottom: 1px solid var(--border-color);
 }
 
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .header__container {
+    justify-content: none;
+  }
+}
+
 .navigation {
   display: flex;
   align-items: center;
@@ -379,12 +402,12 @@ body {
 .header__logo {
   margin-right: 0;
 }
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 768px) {
   .header__logo {
     margin-right: 86px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .header__logo {
     margin-right: 92px;
   }
@@ -393,7 +416,7 @@ body {
 .nav-list {
   display: none;
 }
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 768px) {
   .nav-list {
     display: flex;
   }
@@ -403,30 +426,42 @@ body {
   margin-right: 50px;
 }
 
+.nav-list__link {
+  color: var(--second-text-color);
+  padding: 32px 0;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.nav-list__link:hover, .nav-list__link:focus {
+  color: var(--accent-color);
+}
+.nav-list__link.current {
+  color: var(--accent-color);
+  position: relative;
+}
+.nav-list__link.current::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 109%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-color);
+}
+
 .address-list {
   display: none;
 }
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 768px) {
   .address-list {
     display: block;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .address-list {
     display: flex;
     align-items: center;
     margin-left: auto;
-  }
-}
-
-.header__container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-@media screen and (min-width: 480px) {
-  .header__container {
-    justify-content: none;
   }
 }
 
@@ -457,13 +492,26 @@ body {
   background-color: var(--accent-color);
 }
 
-.address-list__link {
+.address-list_link,
+.nav-list__link {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.1428571429;
+  letter-spacing: 0.02em;
+}
+
+.address-list_link {
   padding: 32px 0;
   color: var(--main-text-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.address-list__link:hover, .address-list__link:focus {
+.address-list_link:hover, .address-list_link:focus {
   color: var(--accent-color);
+}
+
+.address-list__icon {
+  fill: currentColor;
+  margin-right: 10px;
 }
 
 .mobile-btn {
@@ -477,16 +525,7 @@ body {
 .mobile-menu-btn {
   display: inline-block;
 }
-.mobile-menu-btn .close-menu-icon {
-  display: none;
-}
-.mobile-menu-btn.is-open .close-menu-icon {
-  display: block;
-}
-.mobile-menu-btn.is-open .burger-menu-icon {
-  display: none;
-}
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 768px) {
   .mobile-menu-btn {
     display: none;
   }
@@ -503,6 +542,21 @@ body {
   overflow: auto;
   letter-spacing: 0.02em;
   background-color: var(--white-color);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+
+.mobile-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .mobile-menu__close-btn {
@@ -511,26 +565,26 @@ body {
   right: 15px;
 }
 
-.modal-menu-list {
+.mobile-menu-list {
   margin-left: 25px;
 }
 
-.modal-nav-list {
+.mobile-nav-list {
   margin-bottom: 302px;
 }
 
-.modal-menu-list__item:not(:last-child) {
+.mobile-menu-list__item:not(:last-child) {
   margin-bottom: 32px;
 }
 
-.modal-menu-list__link-tel {
+.mobile-menu-list__link-tel {
   font-size: 34px;
   font-weight: 500;
   line-height: 1.1764705882;
   color: var(--accent-color);
 }
 
-.modal-menu-list__link-mailto {
+.mobile-menu-list__link-mailto {
   font-size: 24px;
   font-weight: 500;
   line-height: 1.1666666667;
@@ -538,30 +592,30 @@ body {
   color: var(--main-text-color);
 }
 
-.modal-address-list {
+.mobile-address-list {
   margin-bottom: 64px;
 }
 
-.modal-menu-list__link {
+.mobile-menu-list__link {
   font-size: 40px;
   font-weight: 500;
   line-height: 1.175;
   color: var(--second-text-color);
 }
 
-.modal-menu-list__link.active {
+.mobile-menu-list__link.active {
   color: var(--accent-color);
 }
 
-.modal-social-list {
+.mobile-social-list {
   display: flex;
 }
 
-.modal-social-list__item:not(:last-child) {
+.mobile-social-list__item:not(:last-child) {
   margin-right: 10px;
 }
 
-.modal-social-list__link {
+.mobile-social-list__link {
   font-size: 18px;
   font-weight: 500;
   line-height: 1.2222222222;
