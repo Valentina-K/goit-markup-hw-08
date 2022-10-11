@@ -12,6 +12,11 @@
   width: 100%;
   padding: 30px;
 }
+.team-list{
+   display: flex;
+   flex-wrap: wrap;
+   gap: 30px;
+}
 
 .team-list__item {
   line-height: 1.19;
@@ -21,8 +26,11 @@
     0 1px 3px 0 rgba(0, 0, 0, 0.12);
   border-radius: 0 0 4px 4px;
 
-  &:not(:last-child) {
+  /* &:not(:last-child) {
     margin-bottom: 30px;
+  } */
+  @media screen and(min-width: 768px){
+    flex-basis: calc((100% - 30px) / 2);
   }
   @media screen and(min-width: 1200px) {
     flex-basis: calc((100% - 90px) / 4);
