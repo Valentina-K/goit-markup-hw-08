@@ -2,19 +2,19 @@
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  align-items: flex-start;  
+  align-items: flex-start;
 }
 .features-list__item {
-  @media screen and(min-width:768px){
+  @media screen and(min-width:768px) {
     flex-basis: calc((100% - 30px) / 2);
   }
-  @media screen and(min-width: 1200px){
+  @media screen and(min-width: 1200px) {
     flex-basis: calc((100% - 90px) / 4);
   }
 }
 .features-list__title {
   color: var(--second-text-color);
-  @media screen and(min-width: 768px){
+  @media screen and(min-width: 768px) {
     text-align: left;
   }
 
