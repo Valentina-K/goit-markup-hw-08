@@ -1053,13 +1053,11 @@ body {
   color: var(--white-color);
 }
 
-@media screen and (min-width: 768px) {
-  .list-wrap {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 30px;
-  }
+.list-wrap {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 @media screen and (min-width: 768px) {
