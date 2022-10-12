@@ -2,12 +2,6 @@
   background-color: var(--section-bg-color);
 }
 
-/* .team {
-  line-height: 1.19;
-  text-align: center;
-  background-color: var(--white-color);
-} */
-
 .card-desc {
   width: 100%;
   padding: 30px;
@@ -25,10 +19,7 @@
   box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
     0 1px 3px 0 rgba(0, 0, 0, 0.12);
   border-radius: 0 0 4px 4px;
-
-  /* &:not(:last-child) {
-    margin-bottom: 30px;
-  } */
+  
   @media screen and(min-width: 768px){
     flex-basis: calc((100% - 30px) / 2);
   }

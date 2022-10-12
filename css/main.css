@@ -628,71 +628,6 @@ body {
   color: var(--accent-color);
 }
 
-/* .header-page {
-    border-bottom: 1px solid var(--border-color);
-}
-
-.header-page__logo{
-    margin-right: 94px;
-}
-
-.header-address {
-    margin-left: auto;
-}
-
-.list__item-nav:not(:last-child) {
-    margin-right: 50px;
-}
-
-.list__link-nav {
-    color: var(--second-text-color);
-    padding: 32px 0;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-    &:hover,
-    &:focus{
-        color: var(--accent-color);
-    }
-
-    &.current{
-        color: var(--accent-color);
-        position: relative;
-    }
-
-    &.current::after{
-        content: '';
-        position: absolute;
-        bottom: 0;
-        display: block;
-        width: 109%;
-        height: 4px;
-        border-radius: 2px;
-        background-color: var(--accent-color);
-    }
-}
-
-.address {
-    padding: 32px 0;
-    color: var(--main-text-color);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-    &:hover,
-    &:focus{
-        color: var(--accent-color);
-    }
-}
-
-.link.nav,
-.link.address {
-    font-weight: 500;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-}
-
-.icon-address {
-    fill: currentColor;
-    margin-right: 10px;
-} */
 .hero {
   padding-top: 118px;
   padding-bottom: 118px;
@@ -702,6 +637,11 @@ body {
   max-width: 1600px;
   margin-right: auto;
   margin-left: auto;
+}
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(var(--hero-bg-overlay), var(--hero-bg-overlay)), url(../images/bg@2x.jpg);
+  }
 }
 @media screen and (min-width: 768px) {
   .hero {
@@ -787,36 +727,6 @@ body {
   line-height: 1.71;
 }
 
-.uniq-flex-cont {
-  display: flex;
-  align-items: flex-start;
-  margin-left: -30px;
-}
-
-.list__item-uniq {
-  flex-basis: calc((100% - 90px) / 4);
-  margin-left: 30px;
-}
-
-.uniq-list-icon {
-  width: 270px;
-  height: 120px;
-  background-color: var(--section-bg-color);
-  margin-bottom: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.uniq-title {
-  color: var(--second-text-color);
-  margin-bottom: 10px;
-}
-
-.uniq-text {
-  line-height: 1.71;
-}
-
 .work-section {
   display: none;
 }
@@ -858,11 +768,6 @@ body {
   background-color: var(--section-bg-color);
 }
 
-/* .team {
-  line-height: 1.19;
-  text-align: center;
-  background-color: var(--white-color);
-} */
 .card-desc {
   width: 100%;
   padding: 30px;
@@ -880,9 +785,6 @@ body {
   background-color: var(--white-color);
   box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
   border-radius: 0 0 4px 4px;
-  /* &:not(:last-child) {
-    margin-bottom: 30px;
-  } */
 }
 @media screen and (min-width: 768px) {
   .team-list__item {
