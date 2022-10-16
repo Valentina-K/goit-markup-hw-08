@@ -53,7 +53,7 @@
   max-width: 1600px;
   margin-right: auto;
   margin-left: auto;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1200px) {
     padding-top: 200px;
     padding-bottom: 200px;
   }
@@ -67,9 +67,10 @@
   text-transform: uppercase;
 
   margin-bottom: 30px;
+  width: 360px;
   margin-left: auto;
   margin-right: auto;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1200px) {
     @include font(44px, 900, 60px);
     width: 696px;
   }
